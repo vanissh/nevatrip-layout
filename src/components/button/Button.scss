@@ -1,0 +1,21 @@
+@import '../../index.scss';
+
+.button {
+    width: 165px;
+    height: 44px;
+    background: $main-color;
+    border: none;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    @include transition;
+    &:hover {
+        background-color: $btn-hover;
+    }
+}
+
+@media (min-width: 992px){
+    .button {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+$main-color: #FED74B;
+$text-color: #4B4B4B;
+$btn-hover: #e8b705;
+$title-color: #404040;
+$tag-color: #9E9E9E;
+$price-color: #000000;
+$time-text-color: #343434;
+$time-bg-color: #D9E8FF;
+$time-hover: #6BA6FF;
+$card-border-color: #828282;
+$white-color: #FFF;
+
+@mixin transition {
+  transition: all 0.4s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,0 +1,24 @@
+.cardList {
+    display: grid;
+    grid-template-columns: minmax(auto, 690px);
+    grid-template-rows: auto;
+    padding: 27px 16px 27px 18px;
+    gap: 30px;
+}
+
+@media (min-width: 690px) {
+    .cardList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .cardList {
+        grid-template-columns: minmax(auto, 1106px);
+        grid-template-rows: minmax(370px, auto);
+        gap: 60px;
+    }
+}
+
+
+

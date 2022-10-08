@@ -1,0 +1,170 @@
+@import '../../index.scss';
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 0.3px solid $card-border-color;
+    border-radius: 16px;
+    overflow: hidden;
+    &-info-block {
+        padding: 16px 12px 24px 12px;
+        display: flex;
+        flex-direction: column;
+    }
+    &-img-block {
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &-tags-block {
+        display: flex;
+        white-space: nowrap;
+        align-items: center;
+        img {
+            margin-right: 9px;
+        }
+    }
+    &-tag {
+        font-size: 12px;
+        color: $tag-color;
+        cursor: pointer;
+    }
+    &-label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 15px 0px 12px;
+        padding: 12px 37px 12px 27px;
+        font-weight: 600;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+    &-title {
+        color: $title-color;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    &-description-block {
+        margin: 0;
+        margin-top: 20px;
+        list-style-type: none;
+        padding: 0;
+        list-style-position: outside;
+        li {
+            color: $text-color;
+            font-size: 14px;
+            position: relative;
+            margin-left: 35px;
+            &:not(:last-child){
+                margin-bottom: 11px;
+            };
+            &::before {
+                content: url('../../assets/check-mark.svg');
+                position: absolute;
+                left: -35px;
+            }
+            
+        }
+    }
+    &-price-block {
+        margin-top: 35px;
+        padding: 0px 7px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-price {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        font-size: 30px;
+        color: $price-color;
+        &-discount {
+            margin-top: 6px;
+            font-size: 10px;
+        }
+    }
+    &-time {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        &-item {
+            cursor: pointer;
+            border: none;
+            width: 63px;
+            height: 24px;
+            padding: 3px 13px;
+            background: $time-bg-color;
+            color: $time-text-color;
+            font-size: 14px;
+            border-radius: 11px;
+            margin-right: 4px;
+            margin-top: 7px;
+            @include transition;
+            &:hover {
+                color: $white-color;
+                background-color: $time-hover;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .card {
+        flex-direction: row;
+        &-img-block {
+            min-height: 100%;
+            min-width: 470px;
+            max-width: 470px;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        &-info-block {
+            padding: 16px 17px 26px 22px;
+        }
+        &-title {
+            order: -1;
+            font-size: 26px;
+            line-height: 34px;
+            margin: 0;
+        }
+        &-tags-block {
+            margin-top: 11px;
+        }
+        &-tag {
+            font-size: 14px;
+        }
+        &-time-item {
+            font-size: 16px;
+            min-width: 73px;
+            min-height: 28px;
+            padding: 4px 16px;
+        }
+        &-description-block {
+            margin-top: 9px;
+            li {
+                font-size: 18px;
+            }
+        }
+        &-price-block {
+            margin-top: 24px;
+            justify-content: flex-start;
+        }
+        &-price {
+            margin-right: 20px;
+            font-size: 36px;
+            &-discount {
+                font-size: 14px;
+            }
+        }
+    }
+}
